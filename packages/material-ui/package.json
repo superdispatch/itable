@@ -1,0 +1,14 @@
+{
+  "name": "@aeos/material-ui",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel lib -d dist"
+  },
+  "dependencies": {
+    "@aeos/core": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "3.3.1"
+  }
+}

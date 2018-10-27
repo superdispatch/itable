@@ -3,19 +3,22 @@
   "version": "1.0.0",
   "description": "React Table",
   "main": "dist/index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel lib -d dist"
+    "build": "babel lib -d dist",
+    "build-test": "babel test/index.js -o test/build.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/superdispatch/tableit.git"
-  },
+  "repository": "git+https://github.com/superdispatch/aeos.git",
   "keywords": [
     "react",
     "table"
   ],
-  "author": "",
+  "author": "doniyor2109 <doniyor2109@mail.ru>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/superdispatch/tableit/issues"
@@ -26,10 +29,18 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^4.0.0-rc.6",
+    "@storybook/addon-links": "^4.0.0-rc.6",
+    "@storybook/addons": "^4.0.0-rc.6",
+    "@storybook/react": "^4.0.0-rc.6",
+    "babel-loader": "^8.0.4",
+    "lerna": "^3.4.3"
   },
   "dependencies": {
     "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "styled-components": "^4.0.2"
-  }
+  },
+  "private": true
 }

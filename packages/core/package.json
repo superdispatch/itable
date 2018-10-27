@@ -1,0 +1,11 @@
+{
+  "name": "@aeos/core",
+  "version": "1.1.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel lib -d dist"
+  },
+  "dependencies": {
+    
+  }
+}

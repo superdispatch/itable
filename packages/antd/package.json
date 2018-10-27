@@ -1,0 +1,10 @@
+{
+  "name": "@aeos/antd",
+  "version": "1.0.0",
+  "dependencies": {
+    "@aeos/core": "^1.0.0"
+  },
+  "peerDependencies": {
+    "antd": "^3.10.3"
+  }
+}
