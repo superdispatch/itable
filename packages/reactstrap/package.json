@@ -8,5 +8,6 @@
   "peerDependencies": {
     "bootstrap": "^4.1.3",
     "reactstrap": "^6.5.0"
-  }
+  },
+  "license": "MIT"
 }
