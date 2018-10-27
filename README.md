@@ -1,4 +1,4 @@
-# aeos
+# iTable
 
 React table that exposing fundamental APIs of HTML table
 
