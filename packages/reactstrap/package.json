@@ -1,5 +1,5 @@
 {
-  "name": "@aeos/reactstrap",
+  "name": "@itable/reactstrap",
   "version": "1.0.0",
   "main": "dist/index.js",
   "dependencies": {

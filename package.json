@@ -1,5 +1,5 @@
 {
-  "name": "aeos",
+  "name": "itable",
   "version": "1.0.0",
   "description": "React Table",
   "main": "dist/index.js",
@@ -41,5 +41,6 @@
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "styled-components": "^4.0.2"
-  }
+  },
+  "private": true
 }

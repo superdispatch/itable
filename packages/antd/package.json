@@ -1,5 +1,5 @@
 {
-  "name": "@aeos/antd",
+  "name": "@itable/antd",
   "version": "1.0.0",
   "dependencies": {
     "@aeos/core": "^1.0.0"
