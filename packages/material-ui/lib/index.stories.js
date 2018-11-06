@@ -7,8 +7,8 @@ const data = [
   { id: 1, name: 'Test' }
 ];
 
-storiesOf('MaterialUI ', module)
-.add('Table', () => (
+storiesOf('MaterialUI', module)
+.add('Simple table', () => (
   <Table data={data}>
       <TableHead>
           <TableHeader>ID</TableHeader>

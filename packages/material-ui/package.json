@@ -1,15 +1,16 @@
 {
   "name": "@itable/material-ui",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel lib -d dist"
   },
   "dependencies": {
-    "@aeos/core": "^1.0.0"
+    "@itable/core": "^1.0.0"
   },
   "license": "MIT",
   "peerDependencies": {
     "@material-ui/core": "3.3.1"
-  }
+  },
+  "gitHead": "bfdd37e642646df48e03e2ca37d8a7a66fcbbdba"
 }

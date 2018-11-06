@@ -7,9 +7,9 @@ const data = [
   { id: 1, name: 'Test' }
 ];
 
-storiesOf('Reactstrap ', module)
-.add('with some emoji', () => (
-  <Table data={data}>
+storiesOf('Reactstrap', module)
+.add('Simple table', () => (
+  <Table data={data} isLoading={true}>
       <TableHead>
           <TableHeader>ID</TableHeader>
           <TableHeader>Name</TableHeader>

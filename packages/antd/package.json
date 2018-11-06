@@ -1,11 +1,12 @@
 {
   "name": "@itable/antd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
-    "@aeos/core": "^1.0.0"
+    "@itable/core": "^1.0.0"
   },
   "peerDependencies": {
     "antd": "^3.10.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "bfdd37e642646df48e03e2ca37d8a7a66fcbbdba"
 }

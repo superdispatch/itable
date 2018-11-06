@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "dependencies": {
-    "@aeos/core": "^1.0.0"
+    "@itable/core": "^1.0.0"
   },
   "peerDependencies": {
     "bootstrap": "^4.1.3",
     "reactstrap": "^6.5.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "bfdd37e642646df48e03e2ca37d8a7a66fcbbdba"
 }
