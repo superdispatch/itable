@@ -6,7 +6,7 @@
     "build": "babel lib -d dist"
   },
   "dependencies": {
-    "@itable/core": "^1.0.0"
+    "@itable/core": "^1.3.0"
   },
   "license": "MIT",
   "peerDependencies": {
