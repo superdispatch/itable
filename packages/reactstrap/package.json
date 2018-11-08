@@ -2,6 +2,9 @@
   "name": "@itable/reactstrap",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "scripts": {
+    "build": "babel index.js -d dist"
+  },
   "dependencies": {
     "@itable/core": "^1.0.0"
   },
