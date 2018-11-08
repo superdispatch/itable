@@ -1,26 +1,40 @@
 import React from 'react';
 
+import withTableRow from './withTableRow';
 import withTable from './withTable';
-import { TableContext } from '../contexts';
 
 const tableDataEnhancer = (Component) => (
   class TableRow extends React.Component {
+  tableRow;
     state = {
-
+        index: null,
     };
-    registerTableDataComponent = () => {
-
+    componentDidMount() {
+        this.props.tableRowContext.registerTableDataComponentIndex(this.registerTableDataCallback);
+    }
+    registerTableDataCallback = (index) => {
+        this.setState({ index });
     };
+    get sharedPropsFromHeader() {
+        const { index } = this.state;
+        const { tableContext } = this.props;
+
+        if (typeof index === 'number') {
+            const { width } = tableContext.headerProps[index];
+
+            return { width };
+        }
+        return {};
+    }
     render() {
-      const state = this.state;
       const props = this.props;
+      const sharedPropsFromHeader = this.sharedPropsFromHeader;
+      console.log(sharedPropsFromHeader)
       return (
-        <TableContext.Provider value={state}>
-          <Component {...props}/>
-        </TableContext.Provider>
+          <Component {...sharedPropsFromHeader} {...props}/>
       );
     }
   }
 );
 
-export default (Component) => withTable(tableDataEnhancer(Component));
+export default (Component) => withTable(withTableRow(tableDataEnhancer(Component)));

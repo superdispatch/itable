@@ -4,7 +4,7 @@ import { TableContext } from '../contexts';
 
 const withTable = (Component) => (props) => (
   <TableContext.Consumer>
-    {(value) => <Component {...props} table={value}/>}
+    {(value) => <Component {...props} tableContext={value}/>}
   </TableContext.Consumer>
 );
 

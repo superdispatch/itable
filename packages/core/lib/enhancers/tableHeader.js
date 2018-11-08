@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { TableHeadContext } from '../contexts';
 import SortIcon from '../components/SortIcon';
+import withTableHead from './withTableHead';
+import withTable from './withTable';
 
-export default (Component) => (
+const tableHeader = (Component) => (
   class TableHeader extends React.Component {
     /* reference for TableHeadContext value */
     tableHeadContextValue;
@@ -18,10 +19,12 @@ export default (Component) => (
       return disableSort ? false : Boolean(sortByKey);
     }
     componentDidMount() {
-      const { tableHeadContextValue } = this;
+      const { tableHeadContext, tableContext, ...rest } = this.props;
 
-      if (!tableHeadContextValue)
+      if (!tableHeadContext)
         throw new Error('TableHeader: There must be TableHeadContext above me 🔝');
+
+        tableContext.registerHeaderProps(rest);
     }
     handleOnClick = (event) => {
       const { tableHeadContextValue, isSortable } = this;
@@ -35,28 +38,24 @@ export default (Component) => (
     };
     render() {
       const { handleOnClick, isSortable } = this;
-      const { onClick, sortByKey, children, ...rest } = this.props;
+      const { onClick, sortByKey, children, tableHeadContext, ...rest } = this.props;
+      const { sortBy, sortOrder } = tableHeadContext;
       return (
-        <TableHeadContext.Consumer>
-          {(value) => (
-            this.tableHeadContextValue = value,
-              (({ sortBy, sortOrder }) => (
-                <Component
-                  onClick={handleOnClick}
-                  {...rest}
-                >
-                  {children}
-                  {isSortable &&
-                    <SortIcon
-                      isSorted={sortByKey === sortBy}
-                      sortOrder={sortOrder}
-                    />
-                  }
-                </Component>
-              ))(value)
-          )}
-        </TableHeadContext.Consumer>
+          <Component
+              onClick={handleOnClick}
+              {...rest}
+          >
+              {children}
+              {isSortable &&
+              <SortIcon
+                  isSorted={sortByKey === sortBy}
+                  sortOrder={sortOrder}
+              />
+              }
+          </Component>
       );
     }
   }
 );
+
+export default (Component) => withTable(withTableHead(tableHeader(Component)));

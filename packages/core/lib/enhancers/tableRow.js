@@ -1,16 +1,22 @@
 import React from 'react';
 
-import withTable from './withTable';
 import { TableRowContext } from '../contexts';
+
+function random() {
+    return Math.random().toString(16).substr(2, 10);
+}
 
 const tableRowEnhancer = (Component) => (
   class TableRow extends React.Component {
-    state = {
-
+      rowDataList = [];
+    registerTableDataComponentIndex = (callback) => {
+        const uid = random();
+        this.rowDataList.push(uid);
+        callback(this.rowDataList.indexOf(uid));
     };
-    registerTableDataComponent = () => {
-
-    };
+      state = {
+          registerTableDataComponentIndex: this.registerTableDataComponentIndex,
+      };
     componentDidMount() {
 
     }
@@ -26,4 +32,4 @@ const tableRowEnhancer = (Component) => (
   }
 );
 
-export default (Component) => withTable(tableRowEnhancer(Component));
+export default (Component) => tableRowEnhancer(Component);

@@ -7,7 +7,14 @@ export default (Component) => (
     setEmptyCaptionRenderer = (method) => {
       this.setState({ emptyCaptionRenderer: method });
     };
+      registerHeaderProps = (props) => {
+          this.setState(({ headerProps}) => ({
+              headerProps: headerProps.concat(props),
+          }));
+      };
     state = {
+        headerProps: [],
+        registerHeaderProps: this.registerHeaderProps,
       emptyCaptionRenderer: () => null,
       setEmptyCaptionRenderer: this.setEmptyCaptionRenderer,
     };
