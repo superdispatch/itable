@@ -11,7 +11,7 @@ storiesOf('MaterialUI', module)
 .add('Simple table', () => (
   <Table data={data}>
       <TableHead>
-          <TableHeader>ID</TableHeader>
+          <TableHeader width={100}>ID</TableHeader>
           <TableHeader>Name</TableHeader>
       </TableHead>
       <TableBody>
