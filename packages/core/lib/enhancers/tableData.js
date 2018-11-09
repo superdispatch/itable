@@ -19,7 +19,7 @@ const tableDataEnhancer = (Component) => (
         const { index } = this.state;
         const { tableContext } = this.props;
 
-        if (typeof index === 'number') {
+        if (typeof index === 'number' && tableContext.headerProps[index]) {
             const { width } = tableContext.headerProps[index];
 
             return { width };
@@ -29,7 +29,6 @@ const tableDataEnhancer = (Component) => (
     render() {
       const props = this.props;
       const sharedPropsFromHeader = this.sharedPropsFromHeader;
-      console.log(sharedPropsFromHeader)
       return (
           <Component {...sharedPropsFromHeader} {...props}/>
       );
