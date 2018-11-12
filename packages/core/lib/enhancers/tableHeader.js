@@ -21,10 +21,9 @@ const tableHeader = (Component) => (
     componentDidMount() {
       const { tableHeadContext, tableContext, ...rest } = this.props;
 
-      if (!tableHeadContext)
-        throw new Error('TableHeader: There must be TableHeadContext above me 🔝');
-
-        tableContext.registerHeaderProps(rest);
+      if (tableHeadContext) {
+          tableContext.registerHeaderProps(rest);
+      }
     }
     handleOnClick = (event) => {
       const { tableHeadContextValue, isSortable } = this;
@@ -39,6 +38,18 @@ const tableHeader = (Component) => (
     render() {
       const { handleOnClick, isSortable } = this;
       const { onClick, sortByKey, children, tableHeadContext, ...rest } = this.props;
+
+      if (!tableHeadContext) {
+        return (
+          <Component
+              onClick={handleOnClick}
+              {...rest}
+          >
+              {children}
+          </Component>
+        );
+      }
+
       const { sortBy, sortOrder } = tableHeadContext;
       return (
           <Component
