@@ -11,7 +11,8 @@
     "build": "yarn workspaces run build",
     "build-test": "babel test/index.js -o test/build.js",
     "start": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "publish": "lerna publish"
   },
   "repository": "git+https://github.com/superdispatch/aeos.git",
   "keywords": [
