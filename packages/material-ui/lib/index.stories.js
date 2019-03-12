@@ -10,8 +10,8 @@ const data = [
 storiesOf('MaterialUI', module)
 .add('Simple table', () => (
   <Table data={data}>
-      <TableHead>
-          <TableHeader width={100}>ID</TableHeader>
+      <TableHead onSort={function(){}} sortBy="ID">
+          <TableHeader sortByKey="ID" width={100}>ID</TableHeader>
           <TableHeader>Name</TableHeader>
       </TableHead>
       <TableBody>

@@ -6,9 +6,6 @@ import withTable from './withTable';
 
 const tableHeader = (Component) => (
   class TableHeader extends React.Component {
-    /* reference for TableHeadContext value */
-    tableHeadContextValue;
-
     static defaultProps = {
       sortByKey: null,
       disableSort: false,
@@ -26,13 +23,13 @@ const tableHeader = (Component) => (
       }
     }
     handleOnClick = (event) => {
-      const { tableHeadContextValue, isSortable } = this;
-      const { onClick, sortByKey } = this.props;
+      const { isSortable } = this;
+      const {tableHeadContext, onClick, sortByKey } = this.props;
 
       if (onClick) onClick(event);
 
       if (isSortable && !event.defaultPrevented) {
-        tableHeadContextValue.handleSort(sortByKey);
+        tableHeadContext.handleSort(sortByKey);
       }
     };
     render() {
