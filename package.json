@@ -12,6 +12,7 @@
     "build-test": "babel test/index.js -o test/build.js",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "prepublish": "yarn build",
     "publish": "lerna publish"
   },
   "repository": "git+https://github.com/superdispatch/aeos.git",
@@ -29,7 +30,6 @@
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/plugin-proposal-export-default-from": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.0.0-rc.6",
