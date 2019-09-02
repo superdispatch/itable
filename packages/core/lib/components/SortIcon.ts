@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const SortIcon = styled.div`
+const SortIcon = styled.div<{ isSorted: boolean, sortOrder: 'ASC' | 'DESC'}>`
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;

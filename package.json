@@ -36,8 +36,10 @@
     "@storybook/addon-links": "^4.0.0-rc.6",
     "@storybook/addons": "^4.0.0-rc.6",
     "@storybook/react": "^4.0.0-rc.6",
+    "@types/styled-components": "^4.1.18",
     "babel-loader": "^8.0.4",
-    "lerna": "^3.4.3"
+    "lerna": "^3.4.3",
+    "typescript": "^3.6.2"
   },
   "dependencies": {
     "@material-ui/core": "^3.4.0",

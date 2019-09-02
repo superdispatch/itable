@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "module": "es2015",
+    "target": "es5",
+    "jsx": "react",
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1539,6 +1539,14 @@
   version "15.5.6"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
 
+"@types/react-native@*":
+  version "0.60.9"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.60.9.tgz#89135a6ac9a71a64837e2100dc8dbc7a71b4fe34"
+  integrity sha512-fsceCFV6UQOoQ/DzLS0ya82mZdGmUhMvkkVIq3pjMmxcxR6ENb0noPw6ssE4aVx61J6ukth+MT2PNFgy6eQ9iQ==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/react" "*"
+
 "@types/react-transition-group@^2.0.8":
   version "2.0.14"
   resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.14.tgz#afd0cd785a97f070b55765e9f9d76ff568269001"
@@ -1550,6 +1558,15 @@
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.18.tgz#2e28a2e7f92d3fa7d6a65f2b73275c3e3138a13d"
   dependencies:
     "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/styled-components@^4.1.18":
+  version "4.1.18"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.18.tgz#348804fe5a399ae0a46550afaf030085815ad931"
+  integrity sha512-VrHkgvjbxQXOw0xWSUckusUUZ4y/jqN1u7kF29ngh0oE6uOrlZHleTgqeUqylQqHQIeQ8MxFb50BRHy8ju5DHg==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
     csstype "^2.2.0"
 
 "@webassemblyjs/ast@1.7.10":
@@ -8135,6 +8152,11 @@ type-is@~1.6.16:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+typescript@^3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.2.tgz#105b0f1934119dde543ac8eb71af3a91009efe54"
+  integrity sha512-lmQ4L+J6mnu3xweP8+rOrUwzmN+MRAj7TgtJtDaXE5PMyX2kCrklhg3rvOsOIfNeAWMQWO2F1GPc1kMD2vLAfw==
 
 ua-parser-js@^0.7.18:
   version "0.7.19"

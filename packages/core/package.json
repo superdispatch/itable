@@ -3,7 +3,7 @@
   "version": "1.3.4",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel lib -d dist"
+    "build": "tsc"
   },
   "license": "MIT",
   "gitHead": "bfdd37e642646df48e03e2ca37d8a7a66fcbbdba"
