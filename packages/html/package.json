@@ -1,12 +1,12 @@
 {
   "name": "@itable/html",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
   "dependencies": {
-    "@itable/core": "^1.3.4"
+    "@itable/core": "^2.0.0"
   }
 }
