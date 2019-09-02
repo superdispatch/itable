@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { TableHeadContext, TableHeadContextType } from '../contexts';
 
@@ -8,7 +8,7 @@ type TableHeadProps = {
 
 type TableHeadState = TableHeadContextType
 
-export default function <P>(Component: React.ComponentType<P>) {
+export default function <P>(Component: React.ReactType<P>) {
   return class TableHead extends React.Component<TableHeadProps & P, TableHeadState> {
     constructor(props: TableHeadProps & P) {
       super(props)

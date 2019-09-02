@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 
 import { TableRowContext, TableRowContextType } from '../contexts';
 
 export type WithTableRowProps = { tableRowContext: TableRowContextType }
 
-function withTableRow<P extends WithTableRowProps>(Component: React.ComponentType<P>) {
+function withTableRow<P extends WithTableRowProps>(Component: React.ReactType<P>) {
   return (props: Omit<P, keyof WithTableRowProps>) => {
     return (
       <TableRowContext.Consumer>

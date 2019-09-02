@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import SortIcon from '../components/SortIcon';
 import withTableHead, { WithTableHeadProps } from './withTableHead';
@@ -13,7 +13,7 @@ type TableHeaderProps = TableHeaderOwnProps  & WithTableHeadProps & WithTablePro
 
 type TableHeaderWrapperProps = { onClick?: (e: React.MouseEvent<any>) => void };
 
-function tableHeader<P extends TableHeaderWrapperProps>(Component: React.ComponentType<P>) {
+function tableHeader<P extends TableHeaderWrapperProps>(Component: React.ReactType<P>) {
   return class TableHeader extends React.Component<P & TableHeaderProps> {
     static defaultProps: Partial<TableHeaderProps> = {
       disableSort: false,
@@ -77,7 +77,7 @@ function tableHeader<P extends TableHeaderWrapperProps>(Component: React.Compone
   }
 }
 
-export default function <P extends TableHeaderWrapperProps>(Component: React.ComponentType<P>): React.ComponentType<TableHeaderOwnProps & Omit<P, keyof TableHeaderWrapperProps>> {
+export default function <P extends TableHeaderWrapperProps>(Component: React.ReactType<P>): React.ComponentType<TableHeaderOwnProps & Omit<P, keyof TableHeaderWrapperProps>> {
   // @ts-ignore
   return withTable(withTableHead(tableHeader(Component)))
 };

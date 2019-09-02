@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 
 import withTable, { WithTableProps } from './withTable';
 
-function emptyCaptionEnhancer<P>(Component: React.ComponentType<P>) {
+function emptyCaptionEnhancer<P>(Component: React.ReactType<P>) {
   return class EmptyCaption extends React.Component<WithTableProps & P> {
     componentDidMount() {
       this.props.tableContext.setEmptyCaptionRenderer(

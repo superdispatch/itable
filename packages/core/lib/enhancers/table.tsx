@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { TableContext, TableContextType } from '../contexts';
 
@@ -8,7 +8,7 @@ type TableProps = {
   data: any;
 }
 
-export default function table<P>(Component: React.ComponentType<P>) {
+export default function table<P>(Component: React.ReactType<P>) {
   return (
     class Table extends React.Component<TableProps & P, TableState> {
       setEmptyCaptionRenderer: TableContextType['setEmptyCaptionRenderer'] = (method) => {

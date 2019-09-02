@@ -2,9 +2,9 @@
   "name": "@itable/html",
   "version": "0.1.3",
   "main": "dist/index.js",
-  "typings": "typings.d.ts",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "babel index.js -d dist"
+    "build": "tsc"
   },
   "dependencies": {
     "@itable/core": "^1.3.4"

@@ -1,8 +1,8 @@
-import React, { ComponentType, ReactNode } from 'react'
+import * as React from 'react'
 
 import { TableContext } from '../contexts';
 
-function reactChildrenToArray(children: ReactNode) {
+function reactChildrenToArray(children: React.ReactNode) {
   return Array.isArray(children) ? children : [children];
 }
 
@@ -10,7 +10,7 @@ type TableBodyProps = {
   forwardedRef: React.Ref<any>
 }
 
-export default function <P>(Component: ComponentType<P>): React.ComponentType<P> {
+export default function <P>(Component: React.ReactType<P>): React.ComponentType<P> {
   class TableBody extends React.Component<TableBodyProps> {
     render() {
       const { children, forwardedRef, ...rest } = this.props

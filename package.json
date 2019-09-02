@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "yarn workspaces run build",
+    "build": "lerna run build --stream",
     "build-test": "babel test/index.js -o test/build.js",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

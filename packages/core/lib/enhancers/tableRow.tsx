@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { TableRowContext, TableRowContextType } from '../contexts'
 
@@ -6,7 +6,7 @@ function random(): string {
     return Math.random().toString(16).substr(2, 10);
 }
 
-function tableRowEnhancer<P>(Component: React.ComponentType<P>) {
+function tableRowEnhancer<P>(Component: React.ReactType<P>) {
   return class TableRow extends React.Component<P, TableRowContextType> {
     rowDataList: string[] = []
     registerTableDataComponentIndex: TableRowContextType['registerTableDataComponentIndex'] = (callback) => {
@@ -29,4 +29,6 @@ function tableRowEnhancer<P>(Component: React.ComponentType<P>) {
   }
 }
 
-export default (Component: React.ComponentType) => tableRowEnhancer(Component);
+export default function <P>(Component: React.ReactType<P>) {
+  return tableRowEnhancer(Component)
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import withTableRow, { WithTableRowProps } from './withTableRow';
 import withTable, { WithTableProps } from './withTable';
@@ -11,7 +11,7 @@ type TableRowState = {
 
 type TableDataEnhancerProps = { width?: number };
 
-function tableDataEnhancer<P extends TableDataEnhancerProps>(Component: React.ComponentType<P>) {
+function tableDataEnhancer<P extends TableDataEnhancerProps>(Component: React.ReactType<P>) {
   return class TableRow extends React.Component<TableDataProps & Omit<P, keyof TableDataEnhancerProps>, TableRowState> {
     state: TableRowState = {
       index: null,
@@ -47,6 +47,6 @@ function tableDataEnhancer<P extends TableDataEnhancerProps>(Component: React.Co
   }
 }
 
-export default function <P extends TableDataEnhancerProps>(Component: React.ComponentType<P>) {
+export default function <P extends TableDataEnhancerProps>(Component: React.ReactType<P>) {
   return withTable(withTableRow(tableDataEnhancer(Component)))
 };
